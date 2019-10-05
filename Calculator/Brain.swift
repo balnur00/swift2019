@@ -22,10 +22,14 @@ class Brain {
     var Operations : Dictionary<String, operation> = [
         "e" : operation.Constant(M_E),
         "π" : operation.Constant(M_PI),
+        "AC" : operation.Constant(0.0),
         "√" : operation.Unary(sqrt),
         "x" : operation.Binary({$0 * $1}),
         "/" : operation.Binary({$0 / $1}),
         "+" : operation.Binary({$0 + $1}),
+        "-" : operation.Binary({$0 - $1}),
+        "%" : operation.Unary({$0/100}),
+//        "+/-" : operation.Unary(Double(-)),
         "=" : operation.Equals
     
     ]
